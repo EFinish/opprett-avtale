@@ -9,7 +9,7 @@ services:
         volumes:
             - ./api:/usr/src/app
         ports:
-            - 30002:30002
+            - 3001:3001
 
     opprett-avtale-client:
         build: ./client
@@ -18,4 +18,4 @@ services:
             - ./client:/usr/src/app
             - /usr/src/app/node_modules
         ports:
-            - 420:420
+            - 3000:3000
