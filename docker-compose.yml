@@ -4,18 +4,18 @@ version: "3"
 services:
     opprett-avtale-api:
         # build from this directory
-        build: ./api
-        command: mvn exec
+        build: ./opprett-avtale-api
+        # command: mvn exec
         volumes:
-            - ./api:/usr/src/app
+            - ./opprett-avtale-api:/usr/src/app
         ports:
             - 3001:3001
 
-    opprett-avtale-client:
-        build: ./client
-        command: npm start
-        volumes:
-            - ./client:/usr/src/app
-            - /usr/src/app/node_modules
-        ports:
-            - 3000:3000
+    # opprett-avtale-client:
+    #     build: ./client
+    #     command: npm start
+    #     volumes:
+    #         - ./client:/usr/src/app
+    #         - /usr/src/app/node_modules
+    #     ports:
+    #         - 3000:3000
