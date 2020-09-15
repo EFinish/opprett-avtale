@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 
-WORKDIR /srv/app/
+WORKDIR /usr/src/app/
 
-ENV PATH /srv/app/node_modules/.bin:$PATH
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json ./
 COPY package-lock.json ./

@@ -2,20 +2,20 @@ version: "3"
 
 # docker-composes works with services.
 services:
-    api:
-        # build from this directory
-        build: ./api
-        command: mvn exec:java
-        volumes:
-            - ./api:/opt/app
-        ports:
-            - 4090:4090
-
-    # opprett-avtale-client:
-    #     build: ./client
-    #     command: npm start
+    # api:
+    #     # build from this directory
+    #     build: ./api
+    #     command: mvn exec:java
     #     volumes:
-    #         - ./client:/usr/src/app
-    #         - /usr/src/app/node_modules
+    #         - ./api:/opt/app
     #     ports:
-    #         - 3000:3000
+    #         - 4090:4090
+
+    client:
+        build: ./client
+        command: npm start
+        volumes:
+            - ./client:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - 3000:3000

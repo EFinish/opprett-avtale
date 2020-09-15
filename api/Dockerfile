@@ -5,4 +5,3 @@ COPY pom.xml /opt/app/
 RUN mvn install
 COPY src /opt/app/src
 RUN mvn package -Dmaven.test.skip=true
-EXPOSE 4090
