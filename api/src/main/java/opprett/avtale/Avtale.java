@@ -8,8 +8,8 @@ import javax.ws.rs.core.MediaType;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("myresource")
-public class MyResource {
+@Path("avtale")
+public class Avtale {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
