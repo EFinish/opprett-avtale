@@ -2,14 +2,14 @@ version: "3"
 
 # docker-composes works with services.
 services:
-    opprett-avtale-api:
+    api:
         # build from this directory
-        build: ./opprett-avtale-api
-        # command: mvn exec
+        build: ./api
+        command: mvn exec:java
         volumes:
-            - ./opprett-avtale-api:/usr/src/app
+            - ./api:/opt/app
         ports:
-            - 3001:3001
+            - 4090:4090
 
     # opprett-avtale-client:
     #     build: ./client
